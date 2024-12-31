@@ -7,7 +7,7 @@ Handling missing or null values.
 Renaming and restructuring tables to store cleaned data.
 
 
-#Exploratory-Data-Analysis
+# Exploratory-Data-Analysis
 This repository contains SQL queries used for analyzing and summarizing layoffs data stored in the layoffs_staging2 table.
 
 SQL Queries Overview
