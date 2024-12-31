@@ -1,10 +1,28 @@
 # Data-Cleaning-Project
-The SQL script follows a structured approach to clean and preprocess the data, which is stored in a staging table (layoffs_staging). The cleaned data is then moved to a new table (layoffs_staging2). The key steps include:
+This project involves data cleaning and transformation of a dataset related to layoffs in various companies. The dataset undergoes several stages of processing to handle duplicates, missing values, and standardize certain fields for further analysis.
 
-Removing duplicate records.
-Standardizing values in key columns like company, industry, and country.
-Handling missing or null values.
-Renaming and restructuring tables to store cleaned data.
+Key Steps:
+Table Creation and Data Insertion:
+
+Created a staging table (layoffs_staging) that mirrors the original layoffs table.
+Inserted data from the layoffs table into layoffs_staging.
+Handling Duplicates:
+
+Used ROW_NUMBER() to identify duplicate records based on multiple columns (company, location, industry, etc.).
+Deleted duplicate entries to ensure unique records in the staging table.
+Data Transformation:
+
+Standardized text fields like company, industry, and country (e.g., trimming spaces and standardizing names).
+Converted date fields from text format to the proper DATE type.
+Cleaned up missing or erroneous values (e.g., setting empty industries to NULL and deleting rows with NULL values in key columns).
+Data Aggregation:
+
+Aggregated total layoffs by company, country, and date.
+Performed rolling totals to observe trends in layoffs over time.
+Final Cleanup:
+
+Created a new cleaned table (layoffs_staging2) after handling duplicates and transforming data.
+Dropped unnecessary columns (like row_num) used for processing.
 
 
 # Exploratory-Data-Analysis
